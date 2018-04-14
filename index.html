@@ -369,7 +369,9 @@ hexo d    //部署
 <p><strong>修改网站标题、副标题、网站描述、作者、网站语言、时区</strong><br>打开<strong>站点的</strong>_config.yml配置文件，修改内容如下<br><img src="http://i2.bvimg.com/641445/6afff12aa2f52feb.png" alt="Markdown">  </p>
 <p><strong>社交外链</strong>的设置，即在侧栏展示个人社交网站信息<br>打开<strong>主题</strong>的_config.yml配置文件，在侧边栏增加Github、Lofter外链<br><img src="http://i4.bvimg.com/641445/6f46312aad99f076.png" alt="Markdown"><br>Lofter   </p>
 <p><strong>添加网易云音乐</strong><br>打开网易云音乐网页版，选择音乐后，点击生成外链播放器，然后复制外链的代码<br><img src="http://i1.bvimg.com/641445/e0e77ebe8cca70cc.png" alt="Markdown"><br>在侧栏插入这首歌的音乐播放器，修改 Wangy Blog/themes/next/layout_macro的sidebar.swig，如图所示粘贴刚才的代码<br><img src="http://i1.bvimg.com/641445/3674e94a9f833953.png" alt="Markdown"><br>重新生成、部署网页即可。</p>
-<p><strong>增加侧栏菜单条目</strong><br>默认的侧栏条目有：首页、关于、标签、分类、归档等。若增加其他侧栏条目，修改<strong>主题</strong>的配置文件_config.yml:<br><img src="http://i2.bvimg.com/641445/47b14cdddf184fdf.png" alt="Markdown"></p>
+<p><strong>增加侧栏菜单条目</strong><br>默认的侧栏条目有：首页、关于、标签、分类、归档等。若增加其他侧栏条目，修改<strong>主题</strong>的配置文件_config.yml:<br><img src="http://i2.bvimg.com/641445/5a89d9656c7c8838.png" alt="Markdown"><br>menu里是配置菜单项对应的页面位置顺序。menu_icons对应菜单项的图标，这里的图标是来自于<br>[Font Awesome][]<br>[Font Awesome]: <a href="https://fontawesome.com/" target="_blank" rel="noopener">https://fontawesome.com/</a><br>进入Font Awesome网站后点击Icons，找到需要的icon然后把该icon的名字写在menu_icons对应菜单名后面，注意冒号有一个英文输入状态的空格。设置好后，在命令行里输入：</p>
+<pre><code>hexo new page &quot;你所要增加的菜单项名称（要和你在menu中的填写要匹配）&quot;
+</code></pre><p>新建的页面在博客根目录下的source文件里，这时你就可以对新建的页面自定义设计。<br>未完待续…</p>
 
           
         
@@ -704,6 +706,15 @@ hexo d    //部署
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
