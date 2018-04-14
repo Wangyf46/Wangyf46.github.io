@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[博客搭建常见问题]]></title>
+    <url>%2F2018%2F04%2F14%2F%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[更换主题 将主题更换为Next主题，在博客的根目录Wangyf Blog打开命令行输入: git clone https://github.com/iissnan/hexo-theme-next themes/next 此命令是将Next主题下载到Wangyf Blog目录下的themes主题下的next文件夹中。 打开站点的_config.yml配置文件，修改主题为next 打开主题的_config.yml配置文件，修改主题样式为Pisces，选择是只需要去除前面的#即可，#表示注释 hexo g //生成 hexo d //部署 寻找图床本博客采用[贴图库][][贴图库]: http://www.tietuku.com/ 个性化设置个性化设置就是根据个人需要添加不同的插件及功能 修改网站标题、副标题、网站描述、作者、网站语言、时区打开站点的_config.yml配置文件，修改内容如下 社交外链的设置，即在侧栏展示个人社交网站信息打开主题的_config.yml配置文件，在侧边栏增加Github、Lofter外链Lofter 添加网易云音乐打开网易云音乐网页版，选择音乐后，点击生成外链播放器，然后复制外链的代码在侧栏插入这首歌的音乐播放器，修改 Wangy Blog/themes/next/layout_macro的sidebar.swig，如图所示粘贴刚才的代码重新生成、部署网页即可。 增加侧栏菜单条目默认的侧栏条目有：首页、关于、标签、分类、归档等。若增加其他侧栏条目，修改主题的配置文件_config.yml:]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[博客搭建进展]]></title>
+    <url>%2F2018%2F04%2F14%2F%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%9B%E5%B1%95%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[新的开始]]></title>
+    <url>%2F2018%2F03%2F21%2F%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B%2F</url>
+    <content type="text"><![CDATA[喜欢酸的甜就是真的你 哎呦，还不错]]></content>
+  </entry>
+</search>
