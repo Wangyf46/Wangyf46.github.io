@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/yb8sffO.png">
 <meta property="og:image" content="https://i.imgur.com/kpCI5vc.png">
-<meta property="og:updated_time" content="2018-07-02T11:29:32.680Z">
+<meta property="og:updated_time" content="2018-07-02T11:33:16.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN生成式对抗网络基础知识">
 <meta name="twitter:description" content="说在前面最近马上要开题了，每天都在说学习深度学习BP、CNN、GAN，可到都下来连一个完整的程序也没有跑过，浑浑噩噩的半年过去了，不敢回顾。考虑到以后就业可能会选择深度学习算法岗位，目前有两个：计算机视觉/深度学习的图像算法处理这两个方面吧。TensorFlow框架的使用、python语言和开发环境的使用这些都是必须要掌握的。与我现在准备做的基于深度学习的液晶显示比较相关，听身边的人介绍还是打算用">
@@ -388,13 +388,15 @@
 <li>GAN的基础知识总结   </li>
 <li>GAN的三篇基础论文总结</li>
 <li>基于TensorFlow的GAN代码，完成学习总结  </li>
-<li>GAN、DCGAN的相关文献—-SCI、CVRP会议、公众号<br>书籍的内容就是每天空闲时间尽量可以多看点，争取多刷几遍。</li>
+<li>GAN、DCGAN的相关文献—-SCI、CVRP会议、公众号       </li>
 </ul>
-<h2 id="GAN介绍"><a href="#GAN介绍" class="headerlink" title="GAN介绍"></a>GAN介绍</h2><p>GAN(Generator Adversarial Networks)生成式对抗网络，是一种深度学习模型，是近年来复杂分布上<strong>无监督学习</strong>最具有前景的方法之一。<br><strong>以生成图片为例说明GAN的原理</strong>：<br>G(Generator)网络：生成图片的网络。接收随机噪音z，然后生成图片即G(z)。<br>D(Discriminator)网络：判别是否为真实图片的网络。输入参数是x（一张图片），输出D(X)代表x是真实图片的概率。<br>在训练的过程中，G的目标是尽量生成真实的图片去欺骗判别网络；D的目标是将G生成的图片与真实图片分开，此时两个网络构成博弈的过程。最终博弈的结果是：在理想情况下，G生成足够以假乱真的图片G(z)；D难以判别G(z)是否真实，此时D(G(z))=0.5,用此时的G去生成图片。  </p>
+<p>书籍的内容就是每天空闲时间尽量可以多看点，争取多刷几遍。</p>
+<h2 id="GAN介绍"><a href="#GAN介绍" class="headerlink" title="GAN介绍"></a>GAN介绍</h2><p>GAN(Generator Adversarial Networks)生成式对抗网络，是一种深度学习模型，是近年来复杂分布上<strong>无监督学习</strong>最具有前景的方法之一。   </p>
+<p><strong>以生成图片为例说明GAN的原理</strong>：<br>G(Generator)网络：生成图片的网络。接收随机噪音z，然后生成图片即G(z)。<br>D(Discriminator)网络：判别是否为真实图片的网络。输入参数是x（一张图片），输出D(X)代表x是真实图片的概率。<br>在训练的过程中，G的目标是尽量生成真实的图片去欺骗判别网络；D的目标是将G生成的图片与真实图片分开，此时两个网络构成博弈的过程。最终博弈的结果是：在理想情况下，G生成足够以假乱真的图片G(z)；D难以判别G(z)是否真实，此时D(G(z))=0.5,用此时的G去生成图片。  </p>
 <p><strong>GAN训练过程</strong><br><img src="https://i.imgur.com/yb8sffO.png" alt="">   </p>
 <p><strong>GAN数学语言</strong><br>??????  </p>
 <p>G希望D(G(Z))尽可能大，此时(V(D, G)会变小；<br>D的能力越强，D(x)约接近1，D(G(z))越小，此时V(D, G)会变大；  </p>
-<p><img src="https://i.imgur.com/kpCI5vc.png" alt=""></p>
+<p><img src="https://i.imgur.com/kpCI5vc.png" alt="">  </p>
 <p><strong>DCGAN（深度卷积神经网络）</strong><br>DCGAN与GAN原理一样，但将G、D网络换成了卷积神经网络CNN,不是直接换的，而是将CNN的结构做了改变，以此提高样本的质量和收敛速度。改变如下：  </p>
 <ul>
 <li>取消所有pooling层。G网络中使用转置卷积（transposed convolutional layer）进行下采样，D网络中使用stride的卷积代替pooling。</li>
