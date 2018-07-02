@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[GAN生成式对抗网络基础知识]]></title>
+    <url>%2F2018%2F07%2F02%2FGAN%E7%94%9F%E6%88%90%E5%BC%8F%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[说在前面最近马上要开题了，每天都在说学习深度学习BP、CNN、GAN，可到都下来连一个完整的程序也没有跑过，浑浑噩噩的半年过去了，不敢回顾。考虑到以后就业可能会选择深度学习算法岗位，目前有两个：计算机视觉/深度学习的图像算法处理这两个方面吧。TensorFlow框架的使用、python语言和开发环境的使用这些都是必须要掌握的。与我现在准备做的基于深度学习的液晶显示比较相关，听身边的人介绍还是打算用GAN、DCGAN做，哎呀觉得卷积还是比较难的。目前打算的学习内容是： 吴恩达深度学习课程 TensorFlow实战2本数据 GAN的基础知识总结 GAN的三篇基础论文总结 基于TensorFlow的GAN代码，完成学习总结 GAN、DCGAN的相关文献—-SCI、CVRP会议、公众号书籍的内容就是每天空闲时间尽量可以多看点，争取多刷几遍。 \(GAN\)介绍GAN(Generator Adversarial Networks)生成式对抗网络，是一种深度学习模型，是近年来复杂分布上无监督学习最具有前景的方法之一。以生成图片为例说明GAN的原理：G(Generator)网络：生成图片的网络。接收随机噪音z，然后生成图片即G(z)。D(Discriminator)网络：判别是否为真实图片的网络。输入参数是x（一张图片），输出D(X)代表x是真实图片的概率。在训练的过程中，G的目标是尽量生成真实的图片去欺骗判别网络；D的目标是将G生成的图片与真实图片分开，此时两个网络构成博弈的过程。最终博弈的结果是：在理想情况下，G生成足够以假乱真的图片G(z)；D难以判别G(z)是否真实，此时D(G(z))=0.5,用此时的G去生成图片。 \(GAN\)训练过程 \(GAN\)数学语言?????? G希望D(G(Z))尽可能大，此时(V(D, G)会变小；D的能力越强，D(x)约接近1，D(G(z))越小，此时V(D, G)会变大； \(DCGAN\)（深度卷积神经网络）DCGAN与GAN原理一样，但将G、D网络换成了卷积神经网络CNN,不是直接换的，而是将CNN的结构做了改变，以此提高样本的质量和收敛速度。改变如下： 取消所有pooling层。G网络中使用转置卷积（transposed convolutional layer）进行下采样，D网络中使用stride的卷积代替pooling。 G和D中均使用Batch normalization 去掉FC层，使得网络变成全卷积层 G网络使用ReLU作为激活函数，左后一层使用tanh D网络使用Leaky ReLU作为激活函数 第一部分内容大概这样，后面继续努力。]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>GAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[吴恩达深度学习课程笔记1]]></title>
+    <url>%2F2018%2F05%2F15%2F%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[开题前换了一个研究方向，需要做一些和深度学习有关的研究。之前没有接触过深度学习的东西，很多概念都是一知半解，所以打算每天花点时间系统的学习一下这门课程。课程分为四周。 Week1 Introduction Week2 Basics of Neural Networks programming Week3 one hidden layer Neural Networks Week4 Many layers Deep Nerual Networks今天先介绍第一周的内容，我大概花了2-3h看完第一周的视频内容，作业还没写。 02 什么是神经网络深度学习就是训练神经网络。什么是神经网络？举例子说明一下。这是一个房价预测的例子，利用线性回归将图中几个样本点拟合成直线，从而根据该直线所在的函数预测房价。这是一个最简单的神经网络： ReLu函数（修正线性单元函数）在深度学习中一般用作神经元的激活函数。![](https://ws1.sinaimg.cn/large/006GMFRfly1frccyap2xij307m090mxq.jpg 神经网络就是输入\(x\)，输出\(y\)，足够的训练样本，计算从\(x\)到\(y\)的精确映射的函数。]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>吴恩达深度学习课程笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[梯度下降法]]></title>
     <url>%2F2018%2F04%2F17%2F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%2F</url>
     <content type="text"><![CDATA[梯度下降法整理]]></content>
