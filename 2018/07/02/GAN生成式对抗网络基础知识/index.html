@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -91,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/yb8sffO.png">
 <meta property="og:image" content="https://i.imgur.com/kpCI5vc.png">
-<meta property="og:updated_time" content="2018-07-02T11:33:16.715Z">
+<meta property="og:updated_time" content="2018-07-02T13:19:26.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GAN生成式对抗网络基础知识">
 <meta name="twitter:description" content="说在前面最近马上要开题了，每天都在说学习深度学习BP、CNN、GAN，可到都下来连一个完整的程序也没有跑过，浑浑噩噩的半年过去了，不敢回顾。考虑到以后就业可能会选择深度学习算法岗位，目前有两个：计算机视觉/深度学习的图像算法处理这两个方面吧。TensorFlow框架的使用、python语言和开发环境的使用这些都是必须要掌握的。与我现在准备做的基于深度学习的液晶显示比较相关，听身边的人介绍还是打算用">
@@ -108,7 +106,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -399,11 +397,11 @@
 <p><img src="https://i.imgur.com/kpCI5vc.png" alt="">  </p>
 <p><strong>DCGAN（深度卷积神经网络）</strong><br>DCGAN与GAN原理一样，但将G、D网络换成了卷积神经网络CNN,不是直接换的，而是将CNN的结构做了改变，以此提高样本的质量和收敛速度。改变如下：  </p>
 <ul>
-<li>取消所有pooling层。G网络中使用转置卷积（transposed convolutional layer）进行下采样，D网络中使用stride的卷积代替pooling。</li>
-<li>G和D中均使用Batch normalization  </li>
-<li>去掉FC层，使得网络变成全卷积层</li>
-<li>G网络使用ReLU作为激活函数，左后一层使用tanh  </li>
-<li>D网络使用Leaky ReLU作为激活函数</li>
+<li>取消所有pooling层。G网络中使用转置卷积（transposed convolutional layer）进行下采样，D网络中使用步幅卷积代替所有pooling，G网络中使用微步幅卷积代替所有池化层。</li>
+<li>G和D中均使用Batch normalization（批量归一化方法）</li>
+<li>去掉FC全连接层，使得网络变成全卷积层</li>
+<li>G网络其他层均使用ReLU作为激活函数，输出层使用双曲正切tanh激活函数  </li>
+<li>D网络所有层均使用Leaky ReLU作为激活函数</li>
 </ul>
 <hr>
 <p>第一部分内容大概这样，后面继续努力。</p>
@@ -446,6 +444,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/02/GAN文献汇总/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -526,7 +528,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
